@@ -1,6 +1,6 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilter } from 'redux/contacts/contactsSelectors';
-import React from 'react';
 import { changeFilter } from 'redux/contacts/contactsActions';
 
 export default function Filter() {

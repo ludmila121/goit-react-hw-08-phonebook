@@ -1,6 +1,6 @@
+import Notiflix from 'notiflix';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import Notiflix from 'notiflix';
 
 export const postContact = createAsyncThunk(
   'contacts/add',

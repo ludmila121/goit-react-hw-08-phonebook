@@ -1,12 +1,12 @@
-import { GlobalStyles } from '@mui/material';
-import { Suspense, lazy, useEffect } from 'react';
+import { AppContainer } from './App.styled';
+import { GlobalStyle } from '../GlobalStyle';
 import { useDispatch, useSelector } from 'react-redux';
+import { Suspense, lazy, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import authOperations from 'redux/auth/authOperations';
 import authSelectors from 'redux/auth/authSelectors';
-import { AppContainer } from './App.styled';
 import AppBar from 'components/AppBar/AppBar';
 import Loader from 'components/Loader/Loader';
-import { Route, Routes } from 'react-router-dom';
 import PublicRoute from 'components/PublicRouter/PublicRoute';
 import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
 
@@ -28,7 +28,7 @@ export default function App() {
     <>
       {!isFetchingCurrentUser && (
         <AppContainer>
-          <GlobalStyles />
+          <GlobalStyle />
           <AppBar />
           <Suspense fallback={<Loader />}>
             <Routes>

@@ -1,13 +1,11 @@
 import * as yup from 'yup';
-import { ErrorMessage, Formik, Field } from 'formik';
 import Notiflix from 'notiflix';
-import { Label } from '@mui/icons-material';
-import { nanoid } from '@reduxjs/toolkit';
+import { ErrorMessage, Form, Formik, Field } from 'formik';
+import { ErrorText, Label } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { postContact } from 'redux/contacts/contactsOperations';
 import { getContacts } from 'redux/contacts/contactsSelectors';
-import { ErrorText } from './ContactForm.styled';
-import { Form } from 'react-router-dom';
+import { postContact } from 'redux/contacts/contactsOperations';
+import { nanoid } from 'nanoid';
 
 const schema = yup.object().shape({
   name: yup

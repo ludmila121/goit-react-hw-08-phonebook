@@ -1,9 +1,9 @@
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import ContactListItem from './ContactListItem/ContactListItem';
+import { Contacts } from './ContactList.styled';
 import { deleteContact } from 'redux/contacts/contactsOperations';
 import { getVisibleContacts } from 'redux/contacts/contactsSelectors';
-import React from 'react';
-import ContactListItem from './ContactListItem/ContactListItem';
-import { Contacts } from '@mui/icons-material';
 
 const ContactList = () => {
   const dispatch = useDispatch();
