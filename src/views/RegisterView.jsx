@@ -35,7 +35,6 @@ export default function RegisterView() {
         component="form"
         onSubmit={handleSubmit}
         autoComplete="off"
-        oValidate
         sx={{ mt: 1 }}
       >
         <TextField
